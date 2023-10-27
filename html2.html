@@ -1,0 +1,61 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>Sample Webpage</title>
+<link rel="stylesheet" type="text/css" href="style9.css"/>
+</head>
+<body>
+<div id="topbar">
+</div>
+<div id="container">
+<div id="header">
+<img src="images/logo.png"/>
+</div>
+<div id="banner">
+<img src="images/banner.png"/>
+</div>
+<div id="content1">
+<h2 class="heading">Course Admissions</h2>
+<h5>Streams</h5>
+<h6>Select a stream to see a course & details</h6>
+<ul>
+<li>Arts,Social Sciences & Humanities</li>
+<li>Sciences</li>
+<li>Commerse</li>
+<li>Computer Applications & IT</li>
+<li>Management & Business Administrations</li>
+</ul>
+</div>
+<div id="content2">
+<h2>About</h2>
+<img src="images/about.png"/>
+<p>
+    The University of Madras is a public state university in Chennai, Tamil Nadu, India. Established in 1857, it is one of the oldest and among the most prominent universities in India, incorporated by an act of the Legislative Council of India under the British government.
+    </p>
+</div>
+<div id="content3">
+<h2>Address:</h2>
+<p> Navalar Nagar, Chepauk, Triplicane, Chennai, Tamil Nadu 600005
+</p>
+<h2>Phone:<h2> 
+<p>034 2780 4352</p>
+</div>
+<script>
+    document.querySelectorAll('a[href^="#]').forEach(anchor=>{
+        anchor.addEventListener('click',function(e){
+            e.preventDefault();
+            const targetId=this.getAttribute('href').substring(1);
+            const targetElement=document.getElementById(targetId);
+            if(targetElement){
+                window.scrollTo({
+                    top:targetElement.offsetTop,
+                    behavoiur:'smooth'
+                });
+            }
+        });
+    });
+</script>  
+</div>
+</div>  
+</body>
+</html>
